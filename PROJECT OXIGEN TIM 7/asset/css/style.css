@@ -1,0 +1,114 @@
+:root{
+    --primary : #ac6b36;
+    --bg: #d2e3ec;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+
+body {
+    font-family: 'Platypi', sans-serif;
+    background-color: var(--bg);
+    color: #F3DFE3;  
+    
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:rgba(241, 249, 249, 0.8);
+    border-bottom: 1px solid var ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+}
+
+.navbar .navbar-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4d2715
+
+}
+
+.navbar .navbar-logo span{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a{
+    color: #000000;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav  a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+     transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:HOVER{
+    color: var(--primary);
+}
+
+#menu{
+    display: inline-block;
+}
+
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html {
+        font-size: 62.5%;
+    }
+    .navbar .navbar-nav  {
+        position: absolute;
+        top: 100%;
+        bottom: -100;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+}
