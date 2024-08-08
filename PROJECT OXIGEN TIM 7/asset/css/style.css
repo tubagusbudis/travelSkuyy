@@ -1,6 +1,7 @@
 :root{
     --primary : #ac6b36;
     --bg: #d2e3ec;
+    
 }
 
 *{
@@ -72,7 +73,7 @@ body {
 }
 
 .navbar .navbar-extra a{
-    color: #fff;
+    color: #000;
     margin: 0 0.5rem;
 }
 
@@ -80,9 +81,11 @@ body {
     color: var(--primary);
 }
 
-#menu{
-    display: inline-block;
+#menu1{
+    display: none; 
+    
 }
+
 
 
 /* Media Queries */
@@ -111,4 +114,39 @@ body {
     html {
         font-size: 55%;
     }
+
+#menu1{
+    display: inline-block;
+}
+
+.navbar .navbar-nav{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #bdd2de;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.navbar .navbar-nav.active{
+    right: 0;
+}
+
+.navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-nav a::after{
+    transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scalex(0.25);
+}
+
 }
