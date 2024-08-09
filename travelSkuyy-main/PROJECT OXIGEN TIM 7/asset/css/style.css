@@ -1,0 +1,213 @@
+:root{
+    --primary : #ac6b36;
+    --bg: #d2e3ec;
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+
+body {
+    font-family: 'Platypi', sans-serif;
+    background-color: var(--bg);
+    color: #F3DFE3;  
+    
+    
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:rgba(241, 249, 249, 0.8);
+    border-bottom: 1px solid var ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+}
+
+.navbar .navbar-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4d2715
+
+}
+
+.navbar .navbar-logo span{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a{
+    color: #000000;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav  a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+     transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: #000;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:HOVER{
+    color: var(--primary);
+}
+
+#menu1{
+    display: none; 
+    
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/bayu-syaits-e2IQQL1OhQM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(210, 227, 236, 1)8%, hsla(126, 87%, 21%, 0.187) 25%)
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); 
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    
+}
+
+.hero .content .cta{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+
+/* About Section */
+.about {
+    
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html {
+        font-size: 62.5%;
+    }
+    .navbar .navbar-nav  {
+        position: absolute;
+        top: 100%;
+        bottom: -100;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+
+#menu1{
+    display: inline-block;
+}
+
+.navbar .navbar-nav{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #bdd2de;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.navbar .navbar-nav.active{
+    right: 0;
+}
+
+.navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-nav a::after{
+    transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scalex(0.25);
+}
+
+}
